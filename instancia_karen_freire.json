@@ -1,0 +1,239 @@
+{
+  "profile": {
+    "name": "Dra. Karen Freire",
+    "title": "Odontología • Armonización Orofacial",
+    "description": "Sonrisas saludables y estéticas con ortodoncia, profilaxis y armonización facial mínimamente invasiva.",
+    "image": "/assets/images/profile/profile.jpg",
+    "phone": "+593985351894",
+    "website": ""
+  },
+  "contact": [
+    {
+      "type": "phone",
+      "icon": "/assets/icons/call.png",
+      "text": "Llamar",
+      "action": "tel:+593985351894"
+    },
+    {
+      "type": "email",
+      "icon": "/assets/icons/email.png",
+      "text": "Email",
+      "action": "mailto:citas@drakarenfreire.com"
+    },
+    {
+      "type": "location",
+      "icon": "/assets/icons/location.png",
+      "text": "Ubicación",
+      "address": "Edificio Torre Millenium, Piso 17, Oficina 1711, Av. Fco. de Orellana, Quito",
+      "hours": "Previa cita",
+      "googleMapsLink": "https://maps.google.com/?q=Edificio+Torre+Millenium,+Piso+17,+Oficina+1711,+Av.+Fco.+de+Orellana,+Quito"
+    }
+  ],
+  "socialLinks": [
+    {
+      "type": "instagram",
+      "icon": "instagram.png",
+      "url": "https://www.instagram.com/drakarenfreire/",
+      "text": "Instagram"
+    },
+    {
+      "type": "facebook",
+      "icon": "facebook.png",
+      "url": "https://www.facebook.com/OrtodonciaFreire/",
+      "text": "Facebook"
+    }
+  ],
+  "products": [
+    {
+      "title": "Ortodoncia",
+      "type": "image",
+      "image": "/assets/images/services/ortodoncia.jpg",
+      "description": [
+        "Diagnóstico y planificación personalizada",
+        "Alineadores y/o brackets según el caso",
+        "Corrección de mordida y estética dental",
+        "Controles periódicos eficientes",
+        "Educación de higiene durante el tratamiento",
+        "Resultados funcionales y estéticos"
+      ],
+      "highlight": "Alineamos tu sonrisa con precisión"
+    },
+    {
+      "title": "Profilaxis (Limpieza Dental)",
+      "type": "image",
+      "image": "/assets/images/services/profilaxis.jpg",
+      "description": [
+        "Remoción de placa y sarro",
+        "Pulido para eliminar manchas",
+        "Prevención de caries y gingivitis",
+        "Recomendaciones de cuidado en casa",
+        "Procedimiento rápido y cómodo",
+        "Revisión clínica integral"
+      ],
+      "highlight": "Higiene profesional para una boca sana"
+    },
+    {
+      "title": "Endodoncia",
+      "type": "image",
+      "image": "/assets/images/services/endodoncia.jpg",
+      "description": [
+        "Tratamiento de conductos con precisión",
+        "Alivio del dolor dental",
+        "Conservación de piezas dentales",
+        "Tecnología y técnicas actuales",
+        "Aislamiento absoluto cuando aplica",
+        "Seguimiento post operatorio"
+      ],
+      "highlight": "Salvamos tus piezas dentales a tiempo"
+    },
+    {
+      "title": "Extracciones",
+      "type": "image",
+      "image": "/assets/images/services/extracciones.jpg",
+      "description": [
+        "Evaluación clínica y radiográfica",
+        "Procedimientos mínimos invasivos",
+        "Manejo del dolor y confort",
+        "Indicaciones claras de cuidado",
+        "Cicatrización controlada",
+        "Derivación a implantes si aplica"
+      ],
+      "highlight": "Procedimientos seguros y controlados"
+    },
+    {
+      "title": "Carillas Estéticas",
+      "type": "image",
+      "image": "/assets/images/services/carillas.jpg",
+      "description": [
+        "Diseño de sonrisa (DSD) orientativo",
+        "Cierre de espacios y corrección de forma",
+        "Materiales de alta estética",
+        "Mínima o nula talla dental según caso",
+        "Prueba previa del color",
+        "Resultados naturales y duraderos"
+      ],
+      "highlight": "Transformación estética inmediata y natural"
+    },
+    {
+      "title": "Armonización Orofacial",
+      "type": "image",
+      "image": "/assets/images/services/armonizacion.jpg",
+      "description": [
+        "Toxina botulínica para arrugas dinámicas",
+        "Rinomodelación con ácido hialurónico",
+        "Hilos tensores (según indicación)",
+        "Perfilado y soporte facial",
+        "Procedimientos mínimamente invasivos",
+        "Resultados armónicos y seguros"
+      ],
+      "highlight": "Equilibrio facial con enfoque médico"
+    }
+  ],
+  "education": [
+    {
+      "title": "Especialización en Ortodoncia y Ortopedia",
+      "date": "Formación avanzada",
+      "details": [
+        "Planificación basada en diagnóstico preciso",
+        "Tratamientos según edad y biotipo",
+        "Enfoque en función y estética",
+        "Controles periódicos estructurados",
+        "Educación del paciente y familia",
+        "Casos documentados y medibles"
+      ]
+    },
+    {
+      "title": "Armonización Orofacial Segura",
+      "date": "Técnicas mínimamente invasivas",
+      "details": [
+        "Toxina botulínica para arrugas dinámicas",
+        "Rinomodelación con ácido hialurónico",
+        "Hilos tensores (indicaciones específicas)",
+        "Protocolos de asepsia y trazabilidad",
+        "Consentimiento informado y fotografía",
+        "Resultados naturales y proporcionales"
+      ]
+    },
+    {
+      "title": "Tecnología y Materiales",
+      "date": "Calidad comprobada",
+      "details": [
+        "Instrumental esterilizable y barreras",
+        "Materiales aprobados y biocompatibles",
+        "Evaluación radiográfica cuando aplica",
+        "Sistemas de adhesión modernos",
+        "Control de infecciones riguroso",
+        "Documentación clínica estandarizada"
+      ]
+    },
+    {
+      "title": "Atención Integral del Paciente",
+      "date": "Experiencia del paciente",
+      "details": [
+        "Anamnesis y evaluación completa",
+        "Manejo del dolor y ansiedad",
+        "Instrucciones post-tratamiento claras",
+        "Recordatorios y seguimiento",
+        "Educación en higiene y hábitos",
+        "Comunicación cercana y ágil"
+      ]
+    },
+    {
+      "title": "Resultados y Beneficios",
+      "date": "Salud + Estética",
+      "details": [
+        "Sonrisas saludables y funcionales",
+        "Mejora de autoestima y bienestar",
+        "Prevención de problemas futuros",
+        "Tiempo y costo optimizados",
+        "Fotografías de antes/después",
+        "Satisfacción y fidelización"
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "image": "/assets/images/slides/slide1.jpg",
+      "title": "Ortodoncia en Proceso"
+    },
+    {
+      "image": "/assets/images/slides/slide2.jpg",
+      "title": "Profilaxis Profesional"
+    },
+    {
+      "image": "/assets/images/slides/slide3.jpg",
+      "title": "Rinomodelación AH"
+    },
+    {
+      "image": "/assets/images/slides/slide4.jpg",
+      "title": "Hilos Tensores"
+    },
+    {
+      "image": "/assets/images/slides/slide5.jpg",
+      "title": "Carillas Estéticas"
+    }
+  ],
+  "testimonials": [
+    {
+      "image": "/assets/images/testimonials/test1.jpg",
+      "name": "María P.",
+      "title": "Paciente",
+      "message": "Excelente atención, explicaciones claras y resultados visibles. ¡Muy recomendable!",
+      "category": "Clientes"
+    },
+    {
+      "image": "/assets/images/testimonials/test2.jpg",
+      "name": "Jorge R.",
+      "title": "Paciente",
+      "message": "Mi limpieza y control fueron muy profesionales. Volveré para mis carillas.",
+      "category": "Clientes"
+    },
+    {
+      "image": "/assets/images/testimonials/test3.jpg",
+      "name": "Ana V.",
+      "title": "Paciente",
+      "message": "La rinomodelación cambió mi perfil de forma natural y segura. Gracias, doctora.",
+      "category": "Clientes"
+    }
+  ]
+}
