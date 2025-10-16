@@ -1,6 +1,10 @@
+
+
+
 "use client";
 
 import React from "react";
+import LocaleSwitchPill from "@/components/common/LocaleSwitchPill"
 import ProfileCard from "@/components/profile/ProfileCard/ProfileCard";
 import ContactMethods from "@/components/profile/ContactMethods/ContactMethods";
 import SocialMediaLinks from "@/components/profile/SocialMediaLinks/SocialMediaLinks";
@@ -13,140 +17,160 @@ import SimpleYouTubeEmbed from "@/components/cardContent/VideoPlayer/SimpleYouTu
 import VideoPlayer from "@/components/cardContent/VideoPlayer/VideoPlayer";
 import Testimonials from "@/components/cardContent/Testimonials/Testimonials";
 
-import { servicesItems } from "@/data/products";
-import { educationEntries } from "@/data/education";
-import { slidesData } from "@/data/slides";
-import { banksData } from "@/data/banks";
-import { contactsData } from "@/data/contact";
-import { socialLinks } from "@/data/socialLinks";
-import { profileData } from "@/data/profile";
-import { profileGalleryItems } from "@/data/profileGallery";
-import { galleryItems } from "@/data/gallery";
-import { testimonialsData } from "src/data/testimonial";
+// 👉 i18n
+import { useI18n } from "@/hooks/useI18n";
+
+// 🔹 Datos ES
+import { servicesItems as servicesItemsES } from "@/data/es/products";
+import { educationEntries as educationEntriesES } from "@/data/es/education";
+import { slidesData as slidesDataESEntry } from "@/data/es/slides";
+import { banksData as banksDataES } from "@/data/es/banks";
+import { contactsData as contactsDataES } from "@/data/es/contact";
+import { socialLinks as socialLinksES } from "@/data/es/socialLinks";
+import { profileData as profileDataES } from "@/data/es/profile";
+import { profileGalleryItems as profileGalleryItemsES } from "@/data/es/profileGallery";
+import { galleryItems as galleryItemsES } from "@/data/es/gallery";
+import { testimonialsData as testimonialsDataES } from "@/data/es/testimonial";
+
+// 🔹 Datos EN
+import { servicesItems as servicesItemsEN } from "@/data/en/products";
+import { educationEntries as educationEntriesEN } from "@/data/en/education";
+import { slidesData as slidesDataENEntry } from "@/data/en/slides";
+import { banksData as banksDataEN } from "@/data/en/banks";
+import { contactsData as contactsDataEN } from "@/data/en/contact";
+import { socialLinks as socialLinksEN } from "@/data/en/socialLinks";
+import { profileData as profileDataEN } from "@/data/en/profile";
+import { profileGalleryItems as profileGalleryItemsEN } from "@/data/en/profileGallery";
+import { galleryItems as galleryItemsEN } from "@/data/en/gallery";
+import { testimonialsData as testimonialsDataEN } from "@/data/en/testimonial";
 
 export default function TemplateCard() {
+  const { t, locale } = useI18n();
+
+  // 🧠 Selector de datasets por idioma (ES por defecto)
+  const servicesItems = locale === "en" ? servicesItemsEN : servicesItemsES;
+  const educationEntries = locale === "en" ? educationEntriesEN : educationEntriesES;
+  const slidesData = locale === "en" ? slidesDataENEntry : slidesDataESEntry;
+  const banksData = locale === "en" ? banksDataEN : banksDataES;
+  const contactsData = locale === "en" ? contactsDataEN : contactsDataES;
+  const socialLinks = locale === "en" ? socialLinksEN : socialLinksES;
+  const profileData = locale === "en" ? profileDataEN : profileDataES;
+  const profileGalleryItems = locale === "en" ? profileGalleryItemsEN : profileGalleryItemsES;
+  const galleryItems = locale === "en" ? galleryItemsEN : galleryItemsES;
+  const testimonialsData = locale === "en" ? testimonialsDataEN : testimonialsDataES;
+
+
   return (
     <main className="min-h-screen flex flex-col bg-gradient-light">
-      {/* Perfil */}
-      <section id="inicio" className="w-full bg-gradient-primary text-light">
-        <ProfileCard
-          profile={profileData}
-          // 🎨 Layout del texto
-          layoutOptions={{
-            bgColor: "bg-transparent",
-            textColor: "text-light",
-            borderColor: "border-terciary",
-            nameSize: "text-size-6 sm:text-size-9",
-            titleSize: "text-size-3 sm:text-size-4",
-            descriptionSize: "text-size-2 sm:text-size-3",
-          }}
-          // 🖼️ Imagen (reemplazada por slider si useSliderAsProfile = true)
-          imageOptions={{
-            width: 300,
-            height: 300,
-            size: "w-[300px] h-[420px] sm:w-[400px] sm:h-[550px]",
-            rounded: "rounded-xl",
-            shadow: "shadow-md shadow-accent",
-          }}
-          // 🎞️ Animación
-          animationOptions={{
-            duration: 0.8,
-          }}
-          // 📦 Botones
-          buttonOptions={{
-            type: "btn-rounded",
-            bgColor: "bg-secondary shadow-lg shadow-dark",
-            textColor: "text-black",
-            textSize: "text-size-2 sm:text-3",
-            saveLabel: "Guardar Contacto",
-            whatsappLabel1: "Citas",
-            whatsappLabel2: "Consultas",
-            vcfLink: "/assets/vcards/karenfreire.vcf",
-            whatsappMessage1: "Hola, deseo agendar una cita odontológica.",
-            whatsappMessage2: "Hola, tengo una consulta sobre tratamientos.",
-            shareLabel: "Compartir Tarjeta",
-            shareMessage:
-              "Te comparto la tarjeta digital de la Dra. Karen Freire 🦷✨",
-            shareUrl: "https://karenfreire.anvetcard.com",
-          }}
-          // 🎠 Activar imagen de perfil como slider
-          useSliderAsProfile={false}
-          profileSliderItems={profileGalleryItems}
-        />
-        <ContactMethods
-          contacts={contactsData}
-          variant="with-text"
-          layoutOptions={{
-            bgColor: "bg-transparent",
-            gap: "gap-4",
-            padding: "pt-spacing-4 pb-spacing-2",
-          }}
-          buttonOptions={{
-            buttonType: "btn-rounded",
-            bgColor: "bg-secondary",
-            textColor: "text-dark",
-            textSize: "text-size-2",
-            iconSize: "w-9 h-9 sm:w-12 sm:h-12",
-          }}
-          modalOptions={{
-            modalBgColor: "bg-gradient-secondary",
-            modalTextColor: "text-light",
-            modalTextSize: "text-base",
-            modalTitle: "Ubicación y Horarios",
-            modalButtonText: "Cerrar",
-            animationDuration: 0.5,
-          }}
-        />
-        <SocialMediaLinks
-          socialLinks={socialLinks}
-          variant="icon-only"
-          layoutOptions={{
-            layout: "row",
-            gap: "gap-2",
-            componentBgColor: "bg-transparent",
-            padding: "p-4 pb-spacing-3",
-          }}
-          buttonOptions={{
-            buttonType: "btn-rounded",
-            bgColor: "bg-secondary",
-            hoverColor: "hover:bg-accent hover:text-dark",
-            iconSize: "w-9 h-9 sm:w-12 sm:h-12",
-          }}
-          animate={true}
-        />
-      </section>
+      
 
-      {/* Video principal */}
-      {/* <section className="bg-gradient-contrast py-8">
-        <VideoPlayer
-          videoUrl="/assets/videos/video1.mp4"
-          titleOptions={{
-            text: "Salud y estética para tu sonrisa",
-            color: "text-black",
-            size: "text-size-5 sm:text-size-7",
-            weight: "font-bold",
-            alignment: "text-center",
-            marginBottom: "mb-spacing-3",
-          }}
-          containerOptions={{
-            bgColor: "bg-gradient-primary",
-            padding: "p-10",
-            borderColor: "border border-secondary",
-            borderRadius: "rounded-xl",
-            shadow: "shadow-md shadow-secondary",
-            maxWidth: "max-w-10xl",
-            ratio: "16/9",
-          }}
-        />
-      </section> */}
+      {/* Perfil */}
+<section id="inicio" className="w-full bg-gradient-primary text-light">
+  <div className="relative max-w-7xl mx-auto">
+    {/* Pill ES/EN arriba-derecha */}
+    <div className="absolute right-4 top-4 z-20">
+      {/* Importa y usa el nuevo componente */}
+      {/* import LocaleSwitchPill from "@/components/common/LocaleSwitchPill"; (arriba en imports) */}
+      <LocaleSwitchPill />
+    </div>
+
+    <ProfileCard
+      profile={profileData}
+      // 🎨 Layout del texto
+      layoutOptions={{
+        bgColor: "bg-transparent",
+        textColor: "text-light",
+        borderColor: "border-terciary",
+        nameSize: "text-size-6 sm:text-size-9",
+        titleSize: "text-size-3 sm:text-size-4",
+        descriptionSize: "text-size-2 sm:text-size-3",
+      }}
+      // 🖼️ Imagen (reemplazada por slider si useSliderAsProfile = true)
+      imageOptions={{
+        width: 300,
+        height: 300,
+        size: "w-[300px] h-[420px] sm:w-[400px] sm:h-[550px]",
+        rounded: "rounded-xl",
+        shadow: "shadow-md shadow-accent",
+      }}
+      // 🎞️ Animación
+      animationOptions={{
+        duration: 0.8,
+      }}
+      // 📦 Botones
+      buttonOptions={{
+        type: "btn-rounded",
+        bgColor: "bg-secondary shadow-lg shadow-dark",
+        textColor: "text-black",
+        textSize: "text-size-2 sm:text-3",
+        saveLabel: t.profile.saveContactLabel,
+        whatsappLabel1: t.profile.whatsappAppointmentsLabel,
+        whatsappLabel2: t.profile.whatsappQueriesLabel,
+        vcfLink: "/assets/vcards/karenfreire.vcf",
+        whatsappMessage1: t.profile.whatsappMessage1,
+        whatsappMessage2: t.profile.whatsappMessage2,
+        shareLabel: t.profile.shareCardLabel,
+        shareMessage: t.profile.shareCardMessage,
+        shareUrl: "https://karenfreire.anvetcard.com",
+      }}
+      // 🎠 Activar imagen de perfil como slider
+      useSliderAsProfile={false}
+      profileSliderItems={profileGalleryItems}
+    />
+  </div>
+
+  <ContactMethods
+    contacts={contactsData}
+    variant="with-text"
+    layoutOptions={{
+      bgColor: "bg-transparent",
+      gap: "gap-4",
+      padding: "pt-spacing-4 pb-spacing-2",
+    }}
+    buttonOptions={{
+      buttonType: "btn-rounded",
+      bgColor: "bg-secondary",
+      textColor: "text-dark",
+      textSize: "text-size-2",
+      iconSize: "w-9 h-9 sm:w-12 sm:h-12",
+    }}
+    modalOptions={{
+      modalBgColor: "bg-gradient-secondary",
+      modalTextColor: "text-light",
+      modalTextSize: "text-base",
+      modalTitle: t.contact.locationHoursTitle,
+      modalButtonText: t.contact.modalClose,
+      animationDuration: 0.5,
+    }}
+  />
+  <SocialMediaLinks
+    socialLinks={socialLinks}
+    variant="icon-only"
+    layoutOptions={{
+      layout: "row",
+      gap: "gap-2",
+      componentBgColor: "bg-transparent",
+      padding: "p-4 pb-spacing-3",
+    }}
+    buttonOptions={{
+      buttonType: "btn-rounded",
+      bgColor: "bg-secondary",
+      hoverColor: "hover:bg-accent hover:text-dark",
+      iconSize: "w-9 h-9 sm:w-12 sm:h-12",
+    }}
+    animate={true}
+  />
+</section>
+
+
 
       {/* Beneficios */}
       <section className="bg-gradient-contrast">
         <EducationExperience
           entries={educationEntries}
-          componentTitle="¿Por qué elegir a la Dra. Karen Freire?"
+          componentTitle={t.education.whyChooseTitle}
           titleOptions={{
-            text: "Experiencia, tecnología y resultados",
+            text: t.education.experienceSubtitle,
             color: "text-light",
             size: "text-size-5 sm:text-size-7",
           }}
@@ -172,13 +196,13 @@ export default function TemplateCard() {
           items={servicesItems}
           whatsappNumber="593985351894"
           titleOptions={{
-            text: "Tratamientos Odontológicos",
+            text: t.services.title,
             color: "text-secondary",
             size: "text-size-5 sm:text-size-7",
-            subtitle: "Conoce nuestros procedimientos.",
+            subtitle: t.services.subtitle,
             subtitleColor: "text-secondary",
             subtitleSize: "text-size-2 sm:text-size-3",
-            description: " Haz clic en cada imagen para más información.",
+            description: t.services.description,
             descriptionColor: "text-secondary",
             descriptionSize: "text-size-1 sm:text-size-2",
           }}
@@ -199,7 +223,7 @@ export default function TemplateCard() {
             aspectRatio: "4/3",
           }}
           buttonOptions={{
-            text: "Solicitar Información",
+            text: t.services.buttonText,
             type: "btn-rounded",
             size: "text-base sm:text-lg",
             bgColor: "bg-secondary",
@@ -214,7 +238,7 @@ export default function TemplateCard() {
         <SimpleYouTubeEmbed
           video="https://www.youtube.com/watch?v=IVFPRBUx7uU"
           titleOptions={{
-            text: "Conoce nuestros procedimientos",
+            text: t.video.proceduresTitle,
             color: "text-black",
             size: "text-size-4 sm:text-size-7",
             weight: "font-bold",
@@ -238,7 +262,7 @@ export default function TemplateCard() {
         <Slider
           slides={slidesData}
           titleOptions={{
-            text: "Transformaciones reales, sonrisas felices",
+            text: t.slider.title,
             color: "text-light",
             size: "text-size-5 sm:text-size-7",
             weight: "font-semibold",
@@ -273,7 +297,7 @@ export default function TemplateCard() {
         <Testimonials
           testimonials={testimonialsData}
           titleOptions={{
-            text: "Lo que dicen nuestros pacientes",
+            text: t.testimonials.title,
             color: "text-dark",
             size: "text-size-5 sm:text-size-7 ",
             alignment: "text-center ",
@@ -307,10 +331,10 @@ export default function TemplateCard() {
         <BankInfo
           banks={banksData}
           titleOptions={{
-            text: "Formas de Pago",
+            text: t.banks.title,
             color: "text-secondary",
             size: "text-size-4 sm:text-size-5",
-            description: "Haz clic en el logo para ver los datos bancarios",
+            description: t.banks.description,
             descriptionSize: "text-size-1 sm:text-size-2 ",
             descriptionColor: "text-secondary",
           }}
@@ -327,8 +351,8 @@ export default function TemplateCard() {
             buttonType: "btn-rounded",
             buttonBgColor: "bg-secondary",
             buttonTextColor: "text-dark",
-            copyButtonText: "Copiar",
-            closeButtonText: "Cerrar",
+            copyButtonText: t.banks.copyButtonText,
+            closeButtonText: t.banks.closeButtonText,
           }}
         />
       </section>
@@ -337,13 +361,13 @@ export default function TemplateCard() {
       <section className="bg-gradient-dark">
         <CallToAction
           titleOptions={{
-            text: "Reserva tu cita hoy",
+            text: t.cta.title,
             color: "text-light",
             size: "text-3xl sm:text-4xl",
             weight: "font-extrabold",
           }}
           buttonOptions={{
-            text: "Contactar por WhatsApp",
+            text: t.cta.buttonText,
             phoneNumber: "+593985351894",
             type: "btn-rounded",
             bgColor: "bg-secondary",

@@ -1,0 +1,58 @@
+{
+  "locale": {
+    "switchLabel": "Change language",
+    "es": "ES",
+    "en": "EN"
+  },
+
+  "profile": {
+    "saveContactLabel": "Save Contact",
+    "whatsappAppointmentsLabel": "Appointments",
+    "whatsappQueriesLabel": "Inquiries",
+    "shareCardLabel": "Share Card",
+    "shareCardMessage": "I’m sharing Dr. Karen Freire’s digital card 🦷✨",
+    "whatsappMessage1": "Hello, I’d like to schedule a dental appointment.",
+    "whatsappMessage2": "Hello, I have a question about treatments."
+  },
+
+  "contact": {
+    "locationHoursTitle": "Location & Hours",
+    "modalClose": "Close"
+  },
+
+  "education": {
+    "whyChooseTitle": "Why choose Dr. Karen Freire?",
+    "experienceSubtitle": "Experience, technology and results"
+  },
+
+  "services": {
+    "title": "Dental Treatments",
+    "subtitle": "Learn about our procedures.",
+    "description": "Click each image for more information.",
+    "buttonText": "Request Information"
+  },
+
+  "video": {
+    "proceduresTitle": "Learn about our procedures"
+  },
+
+  "slider": {
+    "title": "Real transformations, happy smiles"
+  },
+
+  "testimonials": {
+    "title": "What our patients say"
+  },
+
+  "banks": {
+    "title": "Payment Methods",
+    "description": "Click the logo to see banking details",
+    "copyButtonText": "Copy",
+    "closeButtonText": "Close"
+  },
+
+  "cta": {
+    "title": "Book your appointment today",
+    "buttonText": "Contact via WhatsApp"
+  }
+}

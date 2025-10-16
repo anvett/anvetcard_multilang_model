@@ -1,0 +1,58 @@
+{
+  "locale": {
+    "switchLabel": "Cambiar idioma",
+    "es": "ES",
+    "en": "EN"
+  },
+
+  "profile": {
+    "saveContactLabel": "Guardar Contacto",
+    "whatsappAppointmentsLabel": "Citas",
+    "whatsappQueriesLabel": "Consultas",
+    "shareCardLabel": "Compartir Tarjeta",
+    "shareCardMessage": "Te comparto la tarjeta digital de la Dra. Karen Freire 🦷✨",
+    "whatsappMessage1": "Hola, deseo agendar una cita odontológica.",
+    "whatsappMessage2": "Hola, tengo una consulta sobre tratamientos."
+  },
+
+  "contact": {
+    "locationHoursTitle": "Ubicación y Horarios",
+    "modalClose": "Cerrar"
+  },
+
+  "education": {
+    "whyChooseTitle": "¿Por qué elegir a la Dra. Karen Freire?",
+    "experienceSubtitle": "Experiencia, tecnología y resultados"
+  },
+
+  "services": {
+    "title": "Tratamientos Odontológicos",
+    "subtitle": "Conoce nuestros procedimientos.",
+    "description": "Haz clic en cada imagen para más información.",
+    "buttonText": "Solicitar Información"
+  },
+
+  "video": {
+    "proceduresTitle": "Conoce nuestros procedimientos"
+  },
+
+  "slider": {
+    "title": "Transformaciones reales, sonrisas felices"
+  },
+
+  "testimonials": {
+    "title": "Lo que dicen nuestros pacientes"
+  },
+
+  "banks": {
+    "title": "Formas de Pago",
+    "description": "Haz clic en el logo para ver los datos bancarios",
+    "copyButtonText": "Copiar",
+    "closeButtonText": "Cerrar"
+  },
+
+  "cta": {
+    "title": "Reserva tu cita hoy",
+    "buttonText": "Contactar por WhatsApp"
+  }
+}
